@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "653b2dd5-7ea0-49bd-91b9-c71647f8e5a4",
+		"name": "Nestjs Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3893746"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"e@mail.com\",\n    \"name\": \"jkhbkjlnbkbhjln\",\n    \"password\": \"password\",\n    \"age\": 30,\n    \"gender\": 0,\n    \"address\": [\n        {\n            \"city\": \"ankaraa\",\n            \"county\": \"çankaya\",\n            \"streetAddress\": \"reşitgalip\"\n        }\n    ],\n    \"orders\": [],\n    \"image\": \"/path/to/image.ext\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/companies",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"jkhbkjlnbkbhjln\",\n    \"description\": \"sd asd asda da da\",\n    \"type\": \"Türk Mutfağı\",\n    \"address\":\n        {\n            \"city\": \"ankaraa\",\n            \"county\": \"çankaya\",\n            \"streetAddress\": \"reşitgalip\",\n            \"location\": {\n                \"lat\": 32.00,\n                \"lng\": 39.00\n            }\n        },\n    \"menu\": [],\n    \"logo\": \"/path/to/logo.ext\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/companies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"companies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/companies",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/companies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"companies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/companies/6586b10b248adb87fb3c0218/menu",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"menu\": [\n        {\n            \"image\": \"path/to/image.ext\",\n            \"product\": \"Küçük Boy Peynirli Pizza\",\n            \"price\": 50,\n            \"ingredients\": []\n        },\n        {\n            \"image\": \"path/to/image.ext\",\n            \"product\": \"Orta Boy Mantarlı Pizza\",\n            \"price\": 100,\n            \"ingredients\": []\n        },\n        {\n            \"image\": \"path/to/image.ext\",\n            \"product\": \"Hamburger\",\n            \"price\": 120,\n            \"ingredients\": []\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/companies/6586b115248adb87fb3c021a/menu",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"companies",
+						"6586b115248adb87fb3c021a",
+						"menu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/companies/6586b10b248adb87fb3c0218/menu",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTg3MGUzYzY2YThkNWY0YjU3OWI2NTciLCJ1c2VybmFtZSI6ImVAbWFpbC5jb20iLCJpYXQiOjE3MDMzNTAxMDYsImV4cCI6MTcwMzM1MDE2Nn0.BuuT6TJbgUTmfT8pQbgH2152NIPka5P46vsrbvUhNNo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/companies/6586b10b248adb87fb3c0218/menu",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"companies",
+						"6586b10b248adb87fb3c0218",
+						"menu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/companies/closestFive",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/companies/closestFive",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"companies",
+						"closestFive"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/companies/6586b115248adb87fb3c021a/comments/0",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/companies/6586b115248adb87fb3c021a/comments/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"companies",
+						"6586b115248adb87fb3c021a",
+						"comments",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/companies/filter",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"lahmacun\",\n    \"type\": \"Fast Food\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/companies/filter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"companies",
+						"filter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTg3MGUzYzY2YThkNWY0YjU3OWI2NTciLCJ1c2VybmFtZSI6ImVAbWFpbC5jb20iLCJpYXQiOjE3MDMzNTAxMDYsImV4cCI6MTcwMzM1MDE2Nn0.BuuT6TJbgUTmfT8pQbgH2152NIPka5P46vsrbvUhNNo",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"e@mail.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
